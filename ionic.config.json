@@ -1,0 +1,7 @@
+{
+  "name": "randevu",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
