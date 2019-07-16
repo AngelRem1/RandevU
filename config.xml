@@ -3,8 +3,9 @@
     <name>MyApp</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework.com" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content original-src="index.html" src="http://localhost:8100" />
+    <content src="index.html" />
     <access origin="*" />
+    <allow-intent href="maps:*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -101,7 +102,8 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^4.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+    <allow-navigation href="http://localhost:8100" sessionid="4661e5a8" />
     <plugin name="cordova-plugin-googlemaps" spec="^2.6.2" />
-    <allow-navigation href="http://localhost:8100" sessionid="3d33d9ca" />
-    <engine name="ios" spec="4.5.5" />
+    <engine name="ios" spec="~5.0.1" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^3.1.0" />
 </widget>
