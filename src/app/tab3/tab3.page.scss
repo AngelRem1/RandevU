@@ -1,1 +1,25 @@
-
+.RetroMe{
+    /* retro me */
+  
+  
+  position: absolute;
+  width: 190px;
+  height: 46px;
+  
+  font-family: Pixelony;
+  font-size: 30px;
+  line-height: 10px;
+  /* identical to box height */
+  
+  
+  color: #000000;
+  }
+  ion-toolbar{
+    --background: linear-gradient(180deg, #FFD703 0%, rgba(255, 255, 255, 0) 100%), #F42121; 
+  }
+  ion-title{
+    font-size: 30px;
+    color: white;
+    font-family: Pixelony;
+  }
+  

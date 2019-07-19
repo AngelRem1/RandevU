@@ -1,8 +1,23 @@
 <ion-header>
     <ion-toolbar>
-      <ion-title>modal</ion-title>
+      <ion-title>
+        <p class="closebutton" (click)="dismiss()">Close</p>
+      </ion-title>
     </ion-toolbar>
   </ion-header>
   
   <ion-content>
+      <div class="flip-container" id="flip-container">
+          <div class="flipper">
+            <div class="front">
+          </div>
+          <h1>Family Amusement Corporation</h1>
+          <div class="back">
+            <!-- back content -->
+            876 N Vermont Ave, Los Angeles, CA 90029
+            <button><a href="maps:?q=34.087520,-118.291480" target="_system">Map</a>Open Maps</button>
+            </div>
+           <div class=back> hours: 8:30 AM - 1:30 AM</div>
+          </div>
+        </div>
   </ion-content>
