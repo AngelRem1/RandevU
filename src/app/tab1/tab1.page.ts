@@ -28,7 +28,8 @@ export class Tab1Page implements OnInit {
 
   async presentModal() {
     const modal = await this.modalController.create({
-      component: ModalPage
+      component: ModalPage,
+      cssClass: 'my-custom-modal-css'
     });
     return await modal.present();
   }

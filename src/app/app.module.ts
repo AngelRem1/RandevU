@@ -12,6 +12,9 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { ModalPage } from '../app/modal/modal.page';
 import { CreateComponent } from './create/create.component';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
+
 @NgModule({
   declarations: [AppComponent, CreateComponent],
   entryComponents: [],
@@ -22,6 +25,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
     Geolocation,
     ModalPage,
     InAppBrowser,
+    EmailComposer,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

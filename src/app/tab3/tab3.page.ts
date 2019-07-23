@@ -1,3 +1,4 @@
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  constructor(private emailComposer: EmailComposer) {}
+  sendEmail() {
+    const email = {
+      to: 'Bringretrotoyou@gmail.com',
+      cc: 'Bringretrotoyou@gmail.com',
+      subject: 'Arcade Location',
+      body: 'Provide Arcade Info, Name: {{Name}}, Address: {{Address}}, Phone Number: {{Phone}}, Daily Hours: {{Hours}} ',
+      isHtml: true
+    };
 
+    this.emailComposer.open(email);
+  }
 }

@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
       <ion-title>
-        <p class="closebutton" (click)="dismiss()">Close</p>
+        <p (click)="dismiss()">Close</p>
       </ion-title>
     </ion-toolbar>
   </ion-header>
@@ -15,9 +15,17 @@
           <div class="back">
             <!-- back content -->
             876 N Vermont Ave, Los Angeles, CA 90029
-            <button><a href="maps:?q=34.087520,-118.291480" target="_system">Map</a>Open Maps</button>
             </div>
-           <div class=back> hours: 8:30 AM - 1:30 AM</div>
+           <div class=back> Daily Hours: 8:30 AM - 1:30 AM <button id="Direct"><a href="maps:?q=34.087520,-118.291480" target="_system">Directions</a></button></div>
+           <img src="https://i.ibb.co/WGdDQt6/Family-Amusement.jpg" class="center">
+          <style>
+          .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+          }
+          </style>
           </div>
         </div>
   </ion-content>

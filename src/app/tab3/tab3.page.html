@@ -7,82 +7,129 @@
 </ion-header>
 
 <ion-content>
-  <div class= "textbox"> Provide Arcade Info Below </div>
-    <form action="form_handler.php" method="post"> 
-      <div>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="arcade_name" style="background-color: #C4C4C4;">
-        </div>
-        <div>
-          <label for="address">Address:</label>
-          <input type="text" id="address" name="arcade_address" style="background-color: #C4C4C4;">
-        </div>
-        <div>
-          <label for="hours">Hours:</label>
-          <input type="text" id="hours" name="arcade_hours" style="background-color: #C4C4C4;">
-        </div>
-        <div class="button">
-            <button type="submit">Send Arcade Info</button>
-          </div>
-    </form>
+  <div>  </div>
+  <div class= "textbox"> Send RetroMe Arcade Info Below </div>
+  <form>
+    <p class="TitleArcade"> Name of Arcade </p>
+    <input id="Name" type="text">
+    <p class="TitleHours">Hours of Place</p>
+    <input id="Hours" type="text">
+    <p class="TitleAddress"> Address</p>
+    <input id="Address" type=text>
+    <p class="TitlePhone"> Phone(Optional) </p>
+    <input id="Phone" type="text">
+  </form>
+    <button class="Send" ion-button full (click)="sendEmail()">Send Email</button>
     <style>
-  .textbox{
-    text-align: center;
-  }
-  form {
-  /* Just to center the form on the page */
-  margin: 0 auto;
-  width: 400px;
-  /* To see the outline of the form */
-  padding: 1em;
-  border: 1px solid #CCC;
-  border-radius: 1em;
-}
-
-form div + div {
-  margin-top: 1em;
-}
-
-label {
-  /* To make sure that all labels have the same size and are properly aligned */
-  display: inline-block;
-  width: 90px;
-}
-
-input, textarea {
-  /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
-  font: 1em sans-serif;
-
-  /* To give the same size to all text fields */
-  width: 300px;
-  box-sizing: border-box;
-
-  /* To harmonize the look & feel of text field border */
-  border: 1px solid #999;
-}
-
-input:focus, textarea:focus {
-  /* To give a little highlight on active elements */
-  border-color: #000;
-}
-
-textarea {
-  /* To properly align multiline text fields with their labels */
-  vertical-align: top;
-
-  /* To give enough room to type some text */
-  height: 5em;
-}
-
-.button {
-  /* To position the buttons to the same position of the text fields */
-  padding-left: 90px; /* same size as the label elements */
-}
-
-button {
-  /* This extra margin represent roughly the same space as the space
-     between the labels and their text fields */
-  margin-left: .5em;
-}</style>
-</ion-content>
+        .TitleArcade{
+          position: absolute;
+      width: 161px;
+      height: 23px;
+      left: 20px;
+      top: 135px;
+      font-family: Pixelony;
+      font-size: 20px;
+      line-height: 23px;
+      /* identical to box height */
+      
+      
+      color: #000000;
+        }
+        .TitleHours{
+          position: absolute;
+      width: 184px;
+      height: 23px;
+      left: 23px;
+      top: 205px;
+      font-family: Pixelony;
+      font-size: 20px;
+      line-height: 23px;
+      /* identical to box height */
+      
+      
+      color: #000000;
+        }
+        .TitleAddress{
+          position: absolute;
+      width: 206px;
+      height: 20px;
+      left: 22px;
+      top: 275px;
+      
+      font-family: Pixelony;
+      font-size: 20px;
+      line-height: 23px;
+      
+      color: #000000;
+        }
+        .TitlePhone{
+          position: absolute;
+      width: 184px;
+      height: 21px;
+      left: 24px;
+      top: 342px;
+      
+      font-family: Pixelony;
+      font-size: 20px;
+      line-height: 23px;
+      
+      color: #000000;
+        }
+        .textbox{
+         margin-left: 25%;
+        }
+        #Email{
+          width: 50%;
+          margin-left: 5%;
+        }
+        #Name{
+          position: absolute;
+      width: 254px;
+      height: 34px;
+      left: 20px;
+      top: 178px;
+      
+      background: #C2C0C0;
+      border-radius: 7px;
+        }
+        #Hours{
+          position: absolute;
+      width: 254px;
+      height: 34px;
+      left: 20px;
+      top: 247px;
+      
+      background: #C4C4C4;
+      border-radius: 7px;
+        }
+        #Address{
+          position: absolute;
+      width: 254px;
+      height: 34px;
+      left: 24px;
+      top: 316px;
+      
+      background: #C4C4C4;
+      border-radius: 7px;
+        }
+        #Phone{
+          position: absolute;
+      width: 254px;
+      height: 34px;
+      left: 24px;
+      top: 385px;
+      
+      background: #C4C4C4;
+      border-radius: 7px;
+        }
+        .Send{
+          position: absolute;
+          width: 163px;
+          height: 34px;
+          left: 104px;
+          top: 496px;
+      
+          background: #C4C4C4;
+        }
+        </style>
+  </ion-content>
