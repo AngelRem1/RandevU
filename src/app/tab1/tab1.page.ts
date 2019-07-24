@@ -21,6 +21,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
+
 export class Tab1Page implements OnInit {
   map: GoogleMap;
   constructor(private geolocation: Geolocation, private platform: Platform, private iab: InAppBrowser,
