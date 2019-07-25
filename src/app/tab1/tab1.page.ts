@@ -1,3 +1,4 @@
+import { MarkerSharingService } from './marker-sharing.service';
 import { Platform } from '@ionic/angular';
 import {
   GoogleMaps,
@@ -13,28 +14,65 @@ import {
 import { Component, OnInit } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { ModalController } from '@ionic/angular';
-import { ModalPage } from '../modal/modal.page';
+import { ModalPage } from './modal/modal.page';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  styleUrls: ['tab1.page.scss'],
 })
-
 export class Tab1Page implements OnInit {
+  // instance variables
   map: GoogleMap;
+  Arcades: any[] = [
+   {
+    Name: 'Family Amusement Corporation',
+    Address: '876 N Vermont Ave, Los Angeles, CA 90029',
+    Hours: '8:30 AM - 1:30 AM'
+   },
+   {
+    Name: 'Jimenez Arcade',
+    Address: '2128 7th st, Los Angeles, CA 90057',
+    Hours: 'Mon-Thurs: 10:00 AM - 10:30 PM'
+   },
+  ];
+  // constructor
   constructor(private geolocation: Geolocation, private platform: Platform, private iab: InAppBrowser,
-              public modalController: ModalController) { }
+              public modalController: ModalController, private markerService: MarkerSharingService) {
+  }
 
+  // methods
   async presentModal() {
     const modal = await this.modalController.create({
       component: ModalPage,
       cssClass: 'my-custom-modal-css'
     });
+
+    this.markerService = new MarkerSharingService();
+    const arcade = this.Arcades[0];
+    this.markerService.setArcadeName(arcade.Name);
+    this.markerService.setHours(arcade.Hours);
+    this.markerService.getArcadeName(arcade.Name);
+    setTimeout(() => {
+      modal.present();
+    }, 1000);
+
+  }
+  async presentModal1() {
+    const modal = await this.modalController.create({
+      component: ModalPage,
+      cssClass: 'my-custom-modal-css',
+      componentProps: {
+        Name: 'Family Amusement Corporation',
+        Address: '876 N Vermont Ave, Los Angeles, CA 90029',
+        Hours: '8:30 AM - 1:30 AM'
+      }
+    });
+
+
     return await modal.present();
   }
-
   async ngOnInit() {
     await this.platform.ready();
     await this.mapGeolocation();
@@ -354,3 +392,14 @@ export class Tab1Page implements OnInit {
     });
   }
 }
+
+// class Custom {
+//   const pic: {
+//     url: '/Users/txt-14/Desktop/RetroMe/src/assets/FamilyAmusement.jpeg'
+//   };
+//   NameofArcade: string;
+//   address: string;
+//   DailyHours: string;
+//   Directions: string;
+//   // image: pic;
+// }

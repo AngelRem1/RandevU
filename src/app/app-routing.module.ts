@@ -3,7 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' },
-  { path: 'modal', loadChildren: './modal/modal.module#ModalPageModule' }];
+  { path: 'modal', loadChildren: './tab1/modal/modal.module#ModalPageModule' }];
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })

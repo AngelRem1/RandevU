@@ -1,3 +1,4 @@
+import { MarkerSharingService } from '../marker-sharing.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { NavParams } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
@@ -8,10 +9,15 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./modal.page.scss'],
 })
 export class ModalPage implements OnInit {
-
-  constructor(public modalController: ModalController) { }
+  Name: string;
+  Hours: string;
+  constructor(public modalController: ModalController, private markerService: MarkerSharingService) { }
 
   ngOnInit() {
+    this.Name = this.markerService.getArcadeName(this.Name);
+    console.log(this.Name, 'Calling nameOfArcade');
+    this.Hours = this.markerService.getHours();
+    console.log(this.Hours, 'Calling hours');
   }
 
   dismiss() {

@@ -1,3 +1,4 @@
+// import { MarkerSharingService } from './tab1/marker-sharing.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -9,12 +10,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
-import { ModalPage } from '../app/modal/modal.page';
+import { ModalPage } from './tab1/modal/modal.page';
 import { CreateComponent } from './create/create.component';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
-
 @NgModule({
   declarations: [AppComponent, CreateComponent],
   entryComponents: [],
@@ -23,6 +23,7 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
     StatusBar,
     SplashScreen,
     Geolocation,
+    // MarkerSharingService,
     ModalPage,
     InAppBrowser,
     EmailComposer,
