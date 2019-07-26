@@ -45,24 +45,24 @@
 
 
 
-<ion-bottom-drawer [(state)]="state" [dockedHeight]="300" distanceTop="250" minimumHeight="0">
+<ion-bottom-drawer [(state)]="state" [dockedHeight]="300" distanceTop="100" minimumHeight="0">
   <div class="drawer-content">
     <div class="marker"></div>
-    <h1 class="name"> {{name}}</h1>
+    <h1 class="name"> {{name}} </h1>
     <div class="container-stars"> 
       <div>
           <img class="stars" src="assets/Stars.png">
       </div>
       <div class="review"> (350) Google Reviews </div>
     </div>
-    <div class="directions"> <img src="assets/Directions.png"></div>
-    <div class= "Text">Family Arcade has been around for more than 40 years! A player’s arcade with all the up to date equipment sprinkled with nostalgia and classic equipment situated in a back in time neon setting that keep our loyal players coming back.</div>  
-    <div> <img class="place" src="assets/FamilyAmusement.jpeg"></div>
+    <div class="directions"> <a href="maps:?q=34.087520,-118.291480" target="_system"><img src="assets/Directions.png"></a> </div>
+    <div class= "Text">{{description}}</div>  
+    <div class="pic"> <img class="place" src="assets/FamilyAmusement2.jpg"></div>
     <div class="info"> Hours: </div>
-    <div class="Text"> 8:30AM - 1:30AM (Mon-Sun) </div>
+    <div class="Text"> {{hours}} </div>
     <div class="info"> Phone: </div>
-    <div class="Text"> (323) 660-8180 </div>
+    <div class="Text"> {{phone}} </div>
     <div class="info">Address:</div>
-    <div class="Text"> 876 N Vermont Ave, Los Angeles, CA 90029 </div>
+    <div class="Text"> {{address}} </div>
   </div>
 </ion-bottom-drawer>

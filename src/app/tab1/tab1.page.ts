@@ -29,6 +29,12 @@ export class Tab1Page implements OnInit {
   public state = DrawerState.Bottom;
   public isActive = false;
   public name;
+  public description;
+  public hours;
+  public phone;
+  public address;
+  public maps;
+  public target;
   map: GoogleMap;
   public height = 0;
   Arcades: any[] = [
@@ -64,7 +70,6 @@ export class Tab1Page implements OnInit {
 
     modal.present();
   }
-
 
   async ngOnInit() {
     await this.platform.ready();
@@ -148,10 +153,16 @@ export class Tab1Page implements OnInit {
       }
     });
 
-
     marker2.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
       this.name = 'Family Amusement Coorporation';
+      this.maps = 'maps:?q=34.087520,-118.291480';
+      this.target = '_system';
+      // tslint:disable-next-line:max-line-length
+      this.description = 'Family Arcade has been around for more than 40 years! A player’s arcade with all the up to date equipment sprinkled with nostalgia and classic equipment situated in a back in time neon setting that keep our loyal players coming back';
+      this.hours = '8:30AM - 1:30AM (Mon-Sun)';
+      this.phone = '(323) 660-8180 ';
+      this.address = '876 N Vermont Ave, Los Angeles, CA 90029';
       this.state = DrawerState.Docked;
       // this.isActive = true;
       this.changeDetection.detectChanges();
@@ -167,6 +178,11 @@ export class Tab1Page implements OnInit {
 
     marker3.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
+      this.name = 'Jimenez Arcade';
+      this.description = '';
+      this.hours = '(Mon-Thurs)1AM–10PM (Fri-Sun)	11:30AM–11:00PM';
+      this.phone = '(213) 713-6262';
+      this.address = '2128 7th St, Los Angeles, CA 90057';
       this.state = DrawerState.Docked;
       // this.isActive = true;
       this.changeDetection.detectChanges();
@@ -182,6 +198,11 @@ export class Tab1Page implements OnInit {
 
     marker4.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
+      this.name = 'One More Round Arcade';
+      this.description = '';
+      this.hours = '12AM-10PM (Mon-Sun)';
+      this.phone = '(213) 713-6262';
+      this.address = '6322025047, Huntington Park, CA 90255';
       this.state = DrawerState.Docked;
       // this.isActive = true;
       this.changeDetection.detectChanges();
@@ -197,6 +218,12 @@ export class Tab1Page implements OnInit {
 
     marker5.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
+      this.name = 'Moon Age Reality Arcade';
+      // tslint:disable-next-line:max-line-length
+      this.description = 'Explore this newly built arcade, not only is it family friendly, but also modernized within this fine establishment not only is it old school with arcades, but it also has VR';
+      this.hours = '(Mon-Tues)Closed, (Wed-Thu)6:00PM-10:00PM, (Fri)4:00 PM-11:00PM, (Sun-Thur)11AM-11PM';
+      this.phone = '(323) 604-9661';
+      this.address = '2208 E 4th St, Los Angeles, CA 90033';
       this.state = DrawerState.Docked;
       // this.isActive = true;
       this.changeDetection.detectChanges();
@@ -212,6 +239,11 @@ export class Tab1Page implements OnInit {
 
     marker6.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
+      this.name = '';
+      this.description = '';
+      this.hours = '';
+      this.phone = '';
+      this.address = '';
       this.state = DrawerState.Docked;
       // this.isActive = true;
       this.changeDetection.detectChanges();
@@ -228,6 +260,11 @@ export class Tab1Page implements OnInit {
 
     marker7.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
+      this.name = '';
+      this.description = '';
+      this.hours = '';
+      this.phone = '';
+      this.address = '';
       this.state = DrawerState.Docked;
       // this.isActive = true;
       this.changeDetection.detectChanges();
@@ -243,6 +280,11 @@ export class Tab1Page implements OnInit {
 
     marker8.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
+      this.name = '';
+      this.description = '';
+      this.hours = '';
+      this.phone = '';
+      this.address = '';
       this.state = DrawerState.Docked;
       // this.isActive = true;
       this.changeDetection.detectChanges();
