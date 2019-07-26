@@ -25,3 +25,67 @@ ion-title{
   font-size: 30px;
   color: white;
 }
+
+.drawer-content{
+  // border: solid thin white;
+  // border-top-left-radius: 25px;
+  // border-top-right-radius: 25px;
+}
+
+::ng-deep .ion-bottom-drawer-scrollable-content{
+  // border: solid thin white;
+  // border-top-left-radius: 25px !important;
+  // border-top-right-radius: 25px !important;
+}
+
+::ng-deep .inner-scroll{
+  // border: solid thin white;
+  // border-top-left-radius: 25px !important;
+  // border-top-right-radius: 25px !important;
+  // background-color: red !important;
+}
+
+.active{
+  transform: translateY(596px);
+}
+.marker {
+  width: 112px;
+  height: 6px;
+  border-radius: 25px;
+  margin: auto;
+  background-color: #C4C4C4;
+  margin-top: 15px;
+}
+.name {
+  font-size: 22px;
+  margin-left: 30px;
+}
+.review {
+  font-size: 15px;
+}
+.container-stars{
+  display:flex;
+}
+.directions {
+  width: 60%;
+  margin-left: 25%;
+}
+.Text {
+  font-size: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.stars {
+  margin-left: 30px;
+  
+}
+.place {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  // width: 50%;
+}
+.info {
+  font-weight: bold;
+  font-size: 20px;
+}

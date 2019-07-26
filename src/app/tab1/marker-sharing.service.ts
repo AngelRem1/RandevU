@@ -10,15 +10,18 @@ export class MarkerSharingService {
   Hours: string;
 
   constructor() {
-    console.log('init service');
+    // console.log('init service');
   }
   // set method
   setArcadeName(Name: string) {
     this.Name = Name;
-    console.log('setting name', this.Name);
+    console.log('Nombre', this.Name);
+    return this.Name;
   }
   setHours(Hours: string) {
     this.Hours = Hours;
+    console.log('Horas', this.Hours);
+    return this.Hours;
   }
   // get method
   getArcadeName(Name: string) {
@@ -26,7 +29,8 @@ export class MarkerSharingService {
     console.log('grabbing name', this.Name);
     return this.Name;
   }
-  getHours() {
+  getHours(Name: string) {
+    console.log('getting Hours', this.Hours);
     return this.Hours;
   }
 }

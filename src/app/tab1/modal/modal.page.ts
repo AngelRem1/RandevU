@@ -9,15 +9,14 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./modal.page.scss'],
 })
 export class ModalPage implements OnInit {
-  Name: string;
-  Hours: string;
+  @Input() name;
+  @Input() hours;
+
   constructor(public modalController: ModalController, private markerService: MarkerSharingService) { }
 
   ngOnInit() {
-    this.Name = this.markerService.getArcadeName(this.Name);
-    console.log(this.Name, 'Calling nameOfArcade');
-    this.Hours = this.markerService.getHours();
-    console.log(this.Hours, 'Calling hours');
+    console.log(this.name);
+    console.log(this.hours);
   }
 
   dismiss() {

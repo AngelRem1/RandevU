@@ -15,10 +15,13 @@ import { CreateComponent } from './create/create.component';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
+
+import { IonBottomDrawerModule } from 'ion-bottom-drawer';
+
 @NgModule({
   declarations: [AppComponent, CreateComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, IonBottomDrawerModule],
   providers: [
     StatusBar,
     SplashScreen,
