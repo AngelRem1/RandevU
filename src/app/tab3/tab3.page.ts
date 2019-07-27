@@ -14,7 +14,7 @@ export class Tab3Page {
       to: 'Bringretrotoyou@gmail.com',
       cc: 'Bringretrotoyou@gmail.com',
       subject: 'Arcade Location',
-      body: 'Provide Arcade Info, Name: {{Name}}, Address: {{Address}}, Phone Number: {{Phone}}, Daily Hours: {{Hours}} ',
+      body: 'Provide Arcade Info, Name:  , Address: , Phone Number: , Daily Hours: ',
       isHtml: true
     };
 

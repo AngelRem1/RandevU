@@ -1,145 +1,158 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      User Input
+      Arcade Me
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="Redbox" style="color: white"> Input arcade and let the rest of us enjoy it as well!!! </div>
-  <div class= "textbox"></div>
+  <div class="Redbox" style="color: red"> Input arcade information </div>
+  <div class="textbox"></div>
   <form>
-    <p class="TitleArcade"> Name of Arcade </p>
+    <p class="TitleArcade">Arcade: </p>
     <input id="Name" type="text">
-    <p class="TitleHours">Hours of Place</p>
+    <p class="TitleHours">Address:</p>
     <input id="Hours" type="text">
-    <p class="TitleAddress"> Address</p>
+    <p class="TitleAddress">Hours:</p>
     <input id="Address" type=text>
-    <p class="TitlePhone"> Phone(Optional) </p>
+    <p class="TitlePhone">Phone #:</p>
     <input id="Phone" type="text">
   </form>
-    <button class="Send" ion-button full (click)="sendEmail()">Send Email</button>
-    <style>
-        .TitleArcade{
-          position: absolute;
-      width: 161px;
-      height: 23px;
-      left: 20px;
-      top: 135px;
+  <button class="Send" ion-button full (click)="sendEmail()">Submit</button>
+  <style>
+    .TitleArcade {
+      position: absolute;
+      width: 64px;
+      height: 25px;
+      left: 33px;
+      top: 70px;
       font-family: Pixelony;
       font-size: 20px;
       line-height: 23px;
+      background-color: #ffffff;
+      z-index: 103;
       /* identical to box height */
-      
-      
+
+
       color: #000000;
-        }
-        .TitleHours{
-          position: absolute;
-      width: 184px;
+    }
+
+    .TitleHours {
+      position: absolute;
+      width: 75px;
       height: 23px;
-      left: 23px;
-      top: 205px;
+      left: 33px;
+      top: 257px;
       font-family: Pixelony;
       font-size: 20px;
       line-height: 23px;
+      background-color: #ffffff;
+      z-index: 102;
       /* identical to box height */
-      
-      
+
+
       color: #000000;
-        }
-        .TitleAddress{
-          position: absolute;
-      width: 206px;
+    }
+
+    .TitleAddress {
+      position: absolute;
+      width: 58px;
       height: 20px;
-      left: 22px;
-      top: 275px;
-      
+      left: 33px;
+      top: 168px;
+
       font-family: Pixelony;
       font-size: 20px;
       line-height: 23px;
-      
+      background-color: #ffffff;
       color: #000000;
-        }
-        .TitlePhone{
-          position: absolute;
-      width: 184px;
+      z-index: 101;
+    }
+
+    .TitlePhone {
+      position: absolute;
+      width: 76px;
       height: 21px;
-      left: 24px;
-      top: 342px;
-      
+      left: 33px;
+      top: 338px;
+
       font-family: Pixelony;
       font-size: 20px;
       line-height: 23px;
-      
+      background-color: #ffffff;
       color: #000000;
-        }
-        .textbox{
-          font-family: Pixelony;
-          margin-left: 10%;
-        }
-        #Email{
-          width: 50%;
-          margin-left: 5%;
-        }
-        #Name{
-          position: absolute;
-      width: 254px;
+      z-index: 100;
+    }
+
+    .textbox {
+      font-family: Pixelony;
+      margin-left: 10%;
+    }
+
+    #Name {
+      position: absolute;
+      width: 273px;
+      height: 55px;
+      left: 33px;
+      top: 104px;
+      border: 2px solid #000000;
+      box-sizing: border-box;
+
+
+      background: #ffffff;
+    }
+
+    #Hours {
+      position: absolute;
+      width: 273px;
+      height: 55px;
+      left: 33px;
+      top: 201px;
+      border: 2px solid #000000;
+      box-sizing: border-box;
+      background: #ffffff;
+      z-index: 99;
+    }
+
+    #Address {
+      position: absolute;
+      width: 273px;
+      height: 55px;
+      left: 33px;
+      top: 287px;
+      border: 2px solid #000000;
+      box-sizing: border-box;
+      background: #ffffff;
+      z-index: 99;
+    }
+
+    #Phone {
+      position: absolute;
+      width: 273px;
+      height: 55px;
+      left: 33px;
+      top: 373px;
+      border: 2px solid #000000;
+      box-sizing: border-box;
+      background: #ffffff;
+      z-index: 99;
+    }
+
+    .Send {
+      position: absolute;
+      width: 163px;
       height: 34px;
-      left: 20px;
-      top: 178px;
-      
-      background: #C2C0C0;
-      border-radius: 7px;
-        }
-        #Hours{
-          position: absolute;
-      width: 254px;
-      height: 34px;
-      left: 20px;
-      top: 247px;
-      
-      background: #C4C4C4;
-      border-radius: 7px;
-        }
-        #Address{
-          position: absolute;
-      width: 254px;
-      height: 34px;
-      left: 24px;
-      top: 316px;
-      
-      background: #C4C4C4;
-      border-radius: 7px;
-        }
-        #Phone{
-          position: absolute;
-      width: 254px;
-      height: 34px;
-      left: 24px;
-      top: 385px;
-      
-      background: #C4C4C4;
-      border-radius: 7px;
-        }
-        .Send{
-          position: absolute;
-          width: 163px;
-          height: 34px;
-          left: 104px;
-          top: 496px;
-      
-          background: #C4C4C4;
-        }
-        .Redbox{
-          height: 50px;
-          width: 350px;
-          margin: auto;
-          margin-top: 15px;
-          text-align: center;
-          background-color: #F54040;
-          font-size: 18px;
-        }
-        </style>
-  </ion-content>
+      top: 496px;
+      margin-left: 30%;
+      background: #F54040;
+      font-size: 15px;
+    }
+
+    .Redbox {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 20px;
+    }
+  </style>
+</ion-content>
