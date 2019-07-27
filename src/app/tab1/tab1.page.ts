@@ -17,6 +17,7 @@ import { ModalController } from '@ionic/angular';
 import { ModalPage } from './modal/modal.page';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { DrawerState } from 'ion-bottom-drawer';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-tab1',
@@ -35,6 +36,7 @@ export class Tab1Page implements OnInit {
   public address;
   public maps;
   public target;
+  public place;
   map: GoogleMap;
   public height = 0;
   Arcades: any[] = [
@@ -52,7 +54,7 @@ export class Tab1Page implements OnInit {
   // constructor
   constructor(private geolocation: Geolocation, private platform: Platform, private iab: InAppBrowser,
               public modalController: ModalController, private markerService: MarkerSharingService, public zone: NgZone,
-              public changeDetection: ChangeDetectorRef) {
+              public changeDetection: ChangeDetectorRef, public sanitizer: DomSanitizer) {
   }
 
   // methods
@@ -156,10 +158,11 @@ export class Tab1Page implements OnInit {
     marker2.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
       this.name = 'Family Amusement Coorporation';
-      this.maps = 'maps:?q=34.087520,-118.291480';
+      this.maps = this.sanitizer.bypassSecurityTrustUrl('maps:?q=34.087520,-118.291480');
       this.target = '_system';
       // tslint:disable-next-line:max-line-length
       this.description = 'Family Arcade has been around for more than 40 years! A player’s arcade with all the up to date equipment sprinkled with nostalgia and classic equipment situated in a back in time neon setting that keep our loyal players coming back';
+      this.place = 'assets/FamilyAmusement2.jpg';
       this.hours = '8:30AM - 1:30AM (Mon-Sun)';
       this.phone = '(323) 660-8180 ';
       this.address = '876 N Vermont Ave, Los Angeles, CA 90029';
@@ -179,7 +182,9 @@ export class Tab1Page implements OnInit {
     marker3.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
       this.name = 'Jimenez Arcade';
+      this.maps = this.sanitizer.bypassSecurityTrustUrl('maps:?q=34.054930,-118.273460');
       this.description = '';
+      this.place = 'assets/Jimenezarcade.jpg';
       this.hours = '(Mon-Thurs)1AM–10PM (Fri-Sun)	11:30AM–11:00PM';
       this.phone = '(213) 713-6262';
       this.address = '2128 7th St, Los Angeles, CA 90057';
@@ -199,7 +204,9 @@ export class Tab1Page implements OnInit {
     marker4.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
       this.name = 'One More Round Arcade';
+      this.maps = this.sanitizer.bypassSecurityTrustUrl('maps:?q=33.980000,-118.220000');
       this.description = '';
+      this.place = 'assets/Onemore.jpg';
       this.hours = '12AM-10PM (Mon-Sun)';
       this.phone = '(213) 713-6262';
       this.address = '6322025047, Huntington Park, CA 90255';
@@ -219,8 +226,10 @@ export class Tab1Page implements OnInit {
     marker5.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
       this.name = 'Moon Age Reality Arcade';
+      this.maps = this.sanitizer.bypassSecurityTrustUrl('maps:?q=34.041350,-118.214075');
       // tslint:disable-next-line:max-line-length
       this.description = 'Explore this newly built arcade, not only is it family friendly, but also modernized within this fine establishment not only is it old school with arcades, but it also has VR';
+      this.place = 'assets/MoonAge.png';
       this.hours = '(Mon-Tues)Closed, (Wed-Thu)6:00PM-10:00PM, (Fri)4:00 PM-11:00PM, (Sun-Thur)11AM-11PM';
       this.phone = '(323) 604-9661';
       this.address = '2208 E 4th St, Los Angeles, CA 90033';
@@ -239,11 +248,13 @@ export class Tab1Page implements OnInit {
 
     marker6.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
-      this.name = '';
-      this.description = '';
-      this.hours = '';
-      this.phone = '';
-      this.address = '';
+      this.name = 'XLanes LA';
+      this.maps = this.sanitizer.bypassSecurityTrustUrl('maps:?q=34.044480,-118.238240');
+      this.description = 'Arcade games , splashy bowling alley & restaurant offering American grub, a sports bar & more';
+      this.place = 'assets/Xlanes.png';
+      this.hours = '(Mon-Wed)11:30AM–12AM, (Thur)11:30AM–1AM, (Fri-Sat)11:30AM–2AM, (Sun)10AM–12AM';
+      this.phone = '(213) 229-8910';
+      this.address = '333 Alameda St #300, Los Angeles, CA 90013';
       this.state = DrawerState.Docked;
       // this.isActive = true;
       this.changeDetection.detectChanges();
@@ -260,11 +271,13 @@ export class Tab1Page implements OnInit {
 
     marker7.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
-      this.name = '';
-      this.description = '';
-      this.hours = '';
-      this.phone = '';
-      this.address = '';
+      this.name = 'Free Play Arcade';
+      this.maps = this.sanitizer.bypassSecurityTrustUrl('maps:?q=34.011730,-118.282960');
+      this.description = 'vintage-style video games arcade located within Exposition Park';
+      this.place = 'assets/Freeplayarcade.jpg';
+      this.hours = '(Mon-Tues)Closed, (Wed)3PM–12AM, (Thursday)3PM–1:30AM, (Fri-Sun)3PM–12AM';
+      this.phone = '(213) 419-9481';
+      this.address = '3939 S Figueroa St, Los Angeles, CA 90037';
       this.state = DrawerState.Docked;
       // this.isActive = true;
       this.changeDetection.detectChanges();
@@ -280,11 +293,14 @@ export class Tab1Page implements OnInit {
 
     marker8.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
       console.log('click');
-      this.name = '';
-      this.description = '';
-      this.hours = '';
-      this.phone = '';
-      this.address = '';
+      this.name = 'Neon Retro Arcade';
+      this.maps = this.sanitizer.bypassSecurityTrustUrl('maps:?q=34.145169,-118.148582');
+      // tslint:disable-next-line:max-line-length
+      this.description = 'Neon Retro Arcade recreates the retro arcade experience for a new generation of gamers to enjoy the classics that launched the video game revolution. Kids walk in and enjoy seeing where their favorite characters began; adults walk in and are instantly transported back to their childhood when playing the latest game meant meeting your friends at the arcade';
+      this.place = 'assets/RetroArcade.jpg';
+      this.hours = '(Mon-Thur)12AM–10PM, (Fri-Sat)12PM–12AM, (Sunday)11AM–9PM';
+      this.phone = '(626) 568-2924';
+      this.address = '28 S Raymond Ave, Pasadena, CA 91105';
       this.state = DrawerState.Docked;
       // this.isActive = true;
       this.changeDetection.detectChanges();

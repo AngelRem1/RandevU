@@ -5,4 +5,16 @@
 .icon{
     background-color: #F54040;;
     font-size: 15px;
+    color: white;
+}
+// ion-icon{
+//     color: white;
+// }
+// ion-label{
+//     color: white;
+// }
+
+
+.tab-selected .icon{
+    color: #FAD54F!important;
 }
