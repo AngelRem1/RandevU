@@ -37,6 +37,8 @@ export class Tab1Page implements OnInit {
   public maps;
   public target;
   public place;
+  joychange: string;
+  // public joychange;
   map: GoogleMap;
   public height = 0;
   Arcades: any[] = [
@@ -121,7 +123,7 @@ export class Tab1Page implements OnInit {
 
     this.map = GoogleMaps.create('map_canvas', mapOptions);
     const mark = {
-      url: 'https://i.ibb.co/HxcxjcF/Group.png', // image url
+      url: 'assets/Joystick.png', // image url
       size: {
         height: 45,
         width: 20
@@ -169,6 +171,9 @@ export class Tab1Page implements OnInit {
       this.state = DrawerState.Docked;
       // this.isActive = true;
       this.changeDetection.detectChanges();
+    });
+    marker2.on(GoogleMapsEvent.MARKER_CLICK).subscribe(() => {
+
     });
     const marker3: Marker = this.map.addMarkerSync({
       icon: mark,
